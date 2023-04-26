@@ -37,10 +37,19 @@ header {
     align-items: center;  
 }
 
+header p {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
 header img {
     margin-top: 3rem;
 }
 
+.footer {
+    opacity: 0;
+}
 
 
 .spacecream {
@@ -76,7 +85,7 @@ header img {
     align-items: center;
 }
 
-.main p {
+.spacecream-text {
     font-family: 'Palanquin';
     font-style: normal;
     font-weight: 400;
@@ -86,8 +95,7 @@ header img {
 
     display: flex;
     align-items: center;
-    text-align: center;    
-    
+    text-align: center;   
 
     color: #23053A;
 
@@ -168,4 +176,119 @@ header img {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (min-width: 650px) {
+    .page {
+        background: #FFFFFF;
+        max-width: 128rem;
+        max-height: auto;
+        display: grid;
+        grid-template-areas: "A B C";
+    }
+
+    .main p {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    header {
+        grid-area: A;
+        width: 25rem;
+        height: auto;
+    }
+
+    .spacecream-text p {
+        opacity: 1;
+        width: 275px;
+        height: 262px;
+
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        /* or 83% */
+        text-align: center;
+
+        color: #FFFFFF;
+
+        margin: 52px;
+    }
+
+    .main {
+        grid-area: B;
+        display: grid;
+        /* grid-template-columns: 2fr 2fr 2fr 2fr; */
+        grid-template-areas: "A B C";
+        align-items: stretch;
+        
+        
+    }
+
+    .main div:nth-child(1) {
+        grid-area: A;       
+    }
+
+    .main div:nth-child(2) {
+        grid-area: B;
+    }
+
+    .main div:nth-child(3) {
+        grid-area: C;
+    }
+
+    .cards{
+        object-fit: contain;
+    }
+
+    .cards img {       
+        width: auto;
+        height: auto;
+
+    }
+
+    .cards h2 {
+        opacity: 0;
+        animation: none;
+    }
+
+    .footer {
+        opacity: 1;
+    }
+
+    .footer h2 {
+        opacity: 1;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        /* identical to box height, or 200% */
+
+
+        position: absolute;
+        text-align: center;
+        width: 592px;
+        height: 28px;
+
+        margin-left: 15rem;
+        color: #4A4E69
+    }
+
+    .footer h2 span {
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: none;        
+    }
+
+    a span {
+        color: #4A4E69;
+        font-weight: 700;
+    }
+
 }
